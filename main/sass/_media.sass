@@ -1,0 +1,334 @@
+@import "vars"
+
+/*==========	Desktop First	==========*/
+
+@media (max-width: 1250px)
+	.header_top
+		padding-left: 30px
+		padding-right: 30px
+// ≥1200px
+		+media-breakpoint-down(lg)
+	.header_top
+		.call
+			margin-left: 0
+
+	.main_text
+		padding-left: 0
+
+	.top_mnu
+		margin: 0 -10px
+		padding: 0 10px
+		.mnu_item
+			margin: 0 10px
+
+@media (max-width: 1130px)
+	#first
+		background-size: cover
+		background-position: 100% 0
+
+	#feedback
+		.arr_left
+			&.slick-arrow
+				left: 25%
+		.arr_right
+			&.slick-arrow
+				right: 25%
+		.draggable
+			border-radius: 0 0 20% 20%
+
+	#contacts
+		.content
+			padding-right: 0
+
+// ≥992px
+			+media-breakpoint-down(md)
+	#request
+		padding: 41px 0px 42px
+		.inputs_wrap
+			margin: 45px 0 0
+			flex-direction: column
+			align-items: center
+		.text
+			margin: 0 0 24px
+			width: 100%
+			max-width: 352px
+		.primary_btn
+			width: 100%
+			max-width: 352px
+
+	#feedback
+		.arr_left
+			&.slick-arrow
+				left: 20%
+		.arr_right
+			&.slick-arrow
+				right: 20%
+		.draggable
+			border-radius: 0 0 15% 15%
+
+	.top_nav
+		display: none
+
+	.call.desc
+		.number
+			margin-bottom: 0
+			&:before
+				margin-right: 10px
+
+	.logo
+		width: 128px
+
+	#calc
+		.content
+			padding-bottom: 63px
+		.checkbox_field
+			width: calc(50% - 30px)
+			margin-bottom: 49px
+		.checkboxes
+			margin-bottom: 27px
+		.mounth_line
+			margin-top: 16px
+		.calculator
+			margin-top: 53px
+		.buttons
+			flex-direction: column
+			align-items: center
+			.primary_btn
+				margin-bottom: 23px
+
+	#contacts
+		.content
+			.addres
+				margin-right: 30px
+
+// ≥768px
+				+media-breakpoint-down(sm)
+	#feedback
+		.arr_left
+			&.slick-arrow
+				left: 17%
+		.arr_right
+			&.slick-arrow
+				right: 17%
+
+	.adv_wrap
+		padding: 51px 20px 6px
+		.content
+			margin: 56px -15px 0
+		.item
+			width: calc(50% - 30px)
+			margin: 0 15px 48px
+
+	#calc
+		.content
+			padding-left: 25px
+			padding-right: 25px
+
+// ≥576px
+			+media-breakpoint-down(xs)
+	#gallery
+		padding-top: 89px
+		.sec_title
+			width: 100%
+			text-align: center
+		.gallery_arrows
+			display: none
+
+	#feedback
+		padding-top: 102px
+		.sec_title
+			text-align: center
+		.item
+			margin-top: 40px
+			width: 224px
+		.feedback_wrap
+			width: 224px
+		.slick-current
+			transform: scale(1)
+		.arr_left
+			&.slick-arrow
+				left: -84px
+		.arr_right
+			&.slick-arrow
+				right: -84px
+		.draggable
+			border-radius: 0 0 10% 10%
+
+	.gallery_slider
+		width: 226px
+		margin-left: auto
+		margin-right: auto
+
+	header
+		padding-top: 27px
+	#first
+		padding-top: 0
+		background-image: none
+		.main_image
+			display: block
+
+	.main_text
+		padding-top: 13px
+		.main_title
+			font-size: 30px
+			margin-bottom: 28px
+		p
+			font-size: 18px
+			line-height: 26px
+			margin-bottom: 17PX
+		.primary_btn
+			width: 100%
+
+	.call.desc
+		.number
+			margin-bottom: 0
+			font-size: 8px
+			display: none
+			b
+				font-size: 16px
+			&:before
+				margin-right: 10px
+		.back_call
+			display: none
+
+	#can_save
+		padding-top: 25px
+
+	.save_items
+		margin: 62px -15px 0px
+		.item
+			width: calc(50% - 30px)
+			margin: 0 15px
+			margin-bottom: 85px
+			p
+				font-size: 15px
+				line-height: 20px
+
+	.sec_title
+		font-size: 29px
+
+	.white_wrap
+		border-radius: 0
+		padding-left: 30px
+		padding-right: 30px
+		.sec_title
+			text-align: left
+
+	#advantages,
+	#calc
+		padding-left: 0
+		padding-right: 0
+		.container
+			width: 100%
+			padding: 0
+
+	.mounth_line
+		left: 5px
+		.num
+			span
+				color: #ffffff
+
+	.adv_wrap
+		.content
+			margin: 55px 0 10px
+		.item
+			width: 100%
+			margin: 0 0 48px
+			display: flex
+		.text
+			margin-top: 0
+			padding-left: 15px
+		h3
+			margin-bottom: 15px
+		.image
+			min-width: 56px
+			img
+				width: auto
+				max-width: 100%
+
+	#containers
+		padding-top: 85px
+		padding-bottom: 46px
+		.item
+			width: 100%
+			margin-bottom: 67px
+		.primary_btn
+			width: 100%
+
+	#calc
+		.content
+			padding-bottom: 63px
+		.checkboxes
+			margin-left: 0
+			margin-right: 0
+		.checkbox_field
+			width: 100%
+			margin-left: 0
+			margin-right: 0
+			margin-bottom: 49px
+
+	#answers
+		padding-top: 63px
+		.content
+			margin-top: 44px
+		.item
+			margin-bottom: 30px
+		.question
+			font-size: 15px
+			line-height: 20px
+		.answer
+			font-size: 14px
+			line-height: 24
+
+	#contacts
+		padding-top: 57px
+		.content
+			flex-direction: column
+			.addres
+				margin-right: 0
+
+	footer
+		padding-top: 43px
+		padding-bottom: 30px
+		.container
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			text-align: center
+		.item
+			margin-bottom: 24px
+		.wayagency
+			flex-direction: column
+			justify-content: center
+			text-align: center
+			align-items: center
+			img
+				margin-left: 0
+				margin-top: 15px
+
+@media (max-width: 360px)
+	section
+		padding-left: 0
+		padding-right: 0
+	.header_top
+		padding-left: 15px
+		padding-right: 15px
+	.logo
+		width: 100px
+
+/*==========	Mobile First	==========*/
+
+// ≤576px
+		+media-breakpoint-up(sm)
+
+// ≤768px
+		+media-breakpoint-up(md)
+
+// ≤992px
+		+media-breakpoint-up(lg)
+	.toggle_mnu
+		display: none
+	.mob_mnu_wrap
+		display: none !important
+// ≤1200px
+		+media-breakpoint-up(xl)

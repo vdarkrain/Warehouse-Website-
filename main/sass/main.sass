@@ -1,0 +1,903 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+html
+	scroll-behavior: smooth
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $hover
+	color: #939393
+
+input.text
+	height: 57.77px
+	line-height: 57.77px
+	padding: 0 38px
+	border-radius: 50px
+	font-size: 16px
+	color: #000
+
+input[type=range] 
+	-webkit-appearance: none 
+	/* Скрывает слайдер, чтобы можно было создать свой */
+	width: 100% 
+	/* Указание параметра ширины требуется для Firefox. */
+
+
+input[type=range]::-webkit-slider-thumb 
+	-webkit-appearance: none
+
+
+input[type=range]:focus 
+	outline: none 
+	/* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+
+
+input[type=range]::-ms-track 
+	width: 100%
+	cursor: pointer
+	background: transparent 
+	/* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+	border-color: transparent
+	color: transparent
+
+/* Специальные правила для браузеров на движках WebKit/Blink */
+input[type=range]::-webkit-slider-thumb 
+	-webkit-appearance: none
+	height: 38px
+	width: 15px
+	border-radius: 20px
+	background: $btn_hover
+	cursor: pointer
+	margin-top: -14px 
+
+
+
+/* Тоже самое для Firefox */
+input[type=range]::-moz-range-thumb 
+  height: 38px
+  width: 15px
+  border-radius: 20px
+  background: $btn_hover
+  cursor: pointer
+
+/* Тоже самое для IE */
+input[type=range]::-ms-thumb 
+  height: 38px
+  width: 15px
+  border-radius: 20px
+  background: $btn_hover
+  cursor: pointer
+
+input[type=range]::-webkit-slider-runnable-track 
+	width: 100%
+	height: 8.4px
+	cursor: pointer
+	background: #E9E9E9
+
+
+
+input[type=range]:focus::-webkit-slider-runnable-track 
+	background: #E9E9E9
+
+
+input[type=range]::-moz-range-track 
+	width: 100%
+	height: 8.4px
+	cursor: pointer
+	background: #E9E9E9
+	border-radius: 1.3px
+	p
+
+
+input[type=range]::-ms-track 
+	width: 100%
+	height: 8.4px
+	cursor: pointer
+	background: transparent
+	border-color: transparent
+	border-width: 16px 0
+	color: transparent
+
+
+input[type=range]::-ms-fill-lower 
+	background: #E9E9E9
+
+input[type=range]:focus::-ms-fill-lower 
+	background: #E9E9E9
+
+input[type=range]::-ms-fill-upper 
+	background: #E9E9E9
+input[type=range]:focus::-ms-fill-upper 
+	background: #E9E9E9
+
+
+body
+	background-image: url(../img/iskry.png)
+	background-color: #000000
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+section
+	padding-left: 15px
+	padding-right: 15px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+a, button
+	@include trans(.3s)
+	cursor: pointer
+	outline: none !important
+
+a
+	color: $text
+	&:hover
+		text-decoration: none
+		color: $hover
+	&:active
+		color: $active
+
+ul 
+	margin: 0
+	padding: 0
+	li 
+		list-style-type: none
+
+.primary_btn
+	background: $btn_bg
+	border-radius: 30px
+	border: 0
+	font-size: 12px
+	font-weight: bold
+	padding: 22px 37px 23px
+	color: #000
+	text-transform: uppercase
+	text-align: center
+	box-shadow: 0px 0px 25px #F2C371
+	display: inline-block
+	border-bottom: 3px solid #AA792B
+	width: 279px
+	&:hover
+		color: #000000
+		background: $btn_hover
+		border-color: #CC9132
+	&:active
+		background: $btn_active
+		border-color: #B68331
+		color: #000000
+	&.blue
+		background: $bg_blue
+		border-color: #CC9132
+		box-shadow: 0px 0px 25px rgba(0, 141, 210, 0.5)
+		border-color: #236B93
+		color: $text
+		&:hover
+			background: $blue_hover
+
+		&:active
+			background: $blue_active
+			border-color: #26587a
+
+.white_wrap
+	background-color: #fff
+	border-radius: 50px
+	box-shadow: 0px 20px 50px rgba(240, 191, 107, 0.5)
+	.sec_title
+		text-align: center
+		color: #000000
+
+.sec_title
+	font-size: 40px
+	span 
+		color: $hover
+	small
+		text-transform: uppercase
+		font-size: 12px
+		font-weight: bold
+		letter-spacing: 0.1em
+		color: $hover
+		display: block
+		margin-bottom: 10px
+
+header
+	position: absolute
+	z-index: 1
+	top: 0
+	left: 0
+	width: 100%
+	padding-top: 31px
+
+.header_top
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-bottom: 10px
+	max-width: 1220px
+	margin: 0 auto
+	.call
+		margin-left: 40px
+
+.logo
+	width: 199px
+	.logo_img
+		width: 100%
+		height: auto
+
+.top_mnu
+	display: flex
+	margin: 0 -16px
+	.mnu_item
+		margin: 0 16px
+		font-size: 14px
+
+.call
+	position: relative
+	a 
+		display: block
+		text-align: right
+		font-weight: bold
+	.number		
+		margin-bottom: 9px
+		b 
+			font-size: 21px
+		&:before
+			@include icon(14px, 14px, 100%)
+			background-image: url(../img/call.svg)
+			display: inline-block
+			margin-right: 13px
+	.back_call
+		position: absolute
+		right: 0
+		bottom: -19px
+		font-size: 10px
+		color: $hover
+		padding-bottom: 3px
+		border-bottom: 1px dashed 
+		&:hover
+
+.toggle_mnu
+	cursor: pointer
+	background: none
+	position: relative
+	z-index: 100
+	border: none
+	span
+	  display: block
+.toggle_mnu:focus
+  outline: none  
+
+
+$w: 23px
+$h: 2.04px
+$t: 5.1px
+
+.sandwich 
+  width: $w
+  height: 16.34px
+  margin: auto
+  z-index: 200
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	background: $text
+	border: none
+	transition: transform 0.5s, top 0.2s
+	display: block
+	border-radius: 2px
+      
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h 
+	top: $t
+	background: $text
+	border: none
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+	border-radius: 2px
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $t * 2
+	background: $text
+	border: none
+	transition: all 0.5s
+	transition-delay: 0.1s
+	border-radius: 2px
+
+.sandwich
+	&.active
+		.sw-topper
+			width: 22.1px
+			height: 1.92px
+			top: 8px
+			transform: rotate(-45deg)
+			background: #000
+		.sw-bottom
+			width: 22.1px
+			height: 1.92px
+			top: 6px
+			transform: rotate(45deg)
+			background: #000
+		.sw-footer
+			width: 22.1px
+			height: 1.92px
+			opacity: 0
+			top: 0
+			transform: rotate(180deg)
+			background: #000
+
+.mob_mnu_wrap
+	position: fixed
+	overflow: scroll
+	display: none
+	width: 100vw
+	height: 100vh
+	background-color: $text
+	padding: 98px 15px 73px	
+	left: 0
+	top: 0
+	.call
+		margin-top: 74px
+		position: relative
+		a 
+		display: block
+		text-align: right
+		font-weight: bold
+	.number		
+		margin-bottom: 9px
+		b 
+			font-size: 21px
+		&:before
+			@include icon(14px, 14px, 100%)
+			background-image: url(../img/call.svg)
+			display: inline-block
+			margin-right: 13px
+	.back_call
+		position: absolute
+		right: 0
+		bottom: -19px
+		font-size: 10px
+		color: $hover
+		padding-bottom: 3px
+		border-bottom: 1px dashed 
+
+.mob_mnu
+	text-transform: uppercase
+	text-align: center
+	display: flex
+	align-items: center
+	flex-direction: column
+	.mnu_item
+		font-size: 27px
+		margin-bottom: 30px
+	a 
+		color: #000000
+		
+
+#first
+	background-image: url(../img/cont.png) 
+	background-position: 120% 0 
+	background-repeat: no-repeat
+	background-size: contain
+	padding-top: 157px
+	padding-bottom: 65px
+	.main_image
+		display: none
+		img 
+			width: 100%
+			height: auto
+
+.main_text
+	font-size: 25px
+	.main_title
+		font-size: 51px
+		margin-bottom: 31px
+		span
+			color: $hover
+	p 
+		line-height: 37px
+		padding-bottom: 29px
+		margin-bottom: 29px
+
+.save_items
+	display: flex
+	flex-wrap: wrap
+	margin: 70px -21px 0px
+	.item
+		width: calc(25% - 42px)
+		margin: 0px 21px
+		margin-bottom: 99px
+		.image 
+			height: 95px
+			display: flex
+			align-items: center
+			img 
+				max-width: 100%
+		p 
+			margin-top: 18px
+			margin-bottom: 0
+			font-size: 18px
+			font-weight: bold
+			line-height: 24px
+
+#can_save
+	padding-top: 85px
+
+.adv_wrap
+	padding: 51px 80px 6px
+	.content
+		margin: 96px -20px 0
+		display: flex
+		flex-wrap: wrap
+	.item
+		width: calc(33.33% - 40px)
+		color: #000000
+		margin: 0 20px 84px
+	.text
+		margin-top: 27px
+	h3 
+		font-size: 18px
+		line-height: 24px
+		margin-bottom: 19px
+	p 
+		line-height: 24px
+		margin-bottom: 0
+	
+#containers
+	padding-top: 151px
+	padding-bottom: 96px
+	.content
+		display: flex
+		flex-wrap: wrap 
+		padding-top: 57px
+	.item
+		width: 33.33%		
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 73px
+	.image
+		height: 227px
+		display: flex
+		align-items: center
+	img 
+		width: 100%
+		height: auto
+	h3 
+		font-size: 18px
+		line-height: 24px
+	p 
+		color: $hover
+		font-size: 23px
+		line-height: 31px
+		font-weight: bold
+	.primary_btn
+		margin: 0 auto
+
+#calc
+	color: #000000
+	.content
+		padding: 44px 95px 63px
+	.range
+		width: 100%
+		margin-top: 41px
+		border: none
+	h3 
+		text-align: center
+		font-size: 25px
+		font-weight: normal
+	.total_price
+		h3 
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 12px
+			opacity: 0.3
+		.value
+			text-align: center
+			font-size: 50px		
+	.calculator
+		margin-top: 59px
+		margin-bottom: 38px
+	.buttons
+		display: flex
+		justify-content: center
+		.primary_btn
+			margin: 0px 12px
+			padding-left: 15px
+			padding-right: 15px
+
+.mounth_line
+	margin-top: 47px
+	margin-bottom: 79px
+	position: relative
+	left: -10px
+	display: flex
+	font-size: 12px
+	line-height: 20px
+	justify-content: space-between
+	.num_wrap
+		width: 15px
+		position: relative
+	.num
+		position: absolute
+		left: 0px
+		width: 40px
+
+#gallery
+	padding-top: 122px
+	padding-left: 0
+	padding-right: 0
+	.container
+		display: flex
+		justify-content: space-between
+		margin-bottom: 33px
+	.gallery_arrows
+		display: flex
+		.arr_left
+			margin-right: 20px
+
+#feedback
+	padding-top: 139px
+	.feedback_wrap
+		max-width: 1200px
+		margin: 0 auto
+	.draggable
+		border: 1px solid transparent
+		border-radius: 0 0 40% 40%
+		overflow: hidden
+		-webkit-mask-image: -webkit-radial-gradient(white,#000)
+	.item
+		margin: 0px 40px
+		width: 302px
+		margin-top: 80px
+		opacity: 0.3
+		@include trans()
+	img 
+		width: 100%
+		height: auto
+	.slick-current
+		transform: scale(1.2)
+		opacity: 1
+	.arr_left
+		&.slick-arrow
+			left: 30%
+	.arr_right	
+		&.slick-arrow
+			right: 30%
+	.slick-dots
+		display: flex
+		justify-content: center
+		position: relative
+		top: -28px
+		button
+			margin: 6px
+			color: rgba(0, 0, 0, 0)
+			border: 0
+			border-radius: 50%
+			@include trans()
+			@include icon(44px, 44px, 100%)
+		li
+			&:nth-child(1)
+				button
+					background-image: url(../img/pers1.png)
+			&:nth-child(2)
+				button
+					background-image: url(../img/pers2.png)
+			&:nth-child(3)
+				button
+					background-image: url(../img/pers3.png)
+		.slick-active
+			button
+				transform: scale(1.2)
+				border: 2px solid #E9B45B
+				box-sizing: border-box
+
+.arr_left, .arr_right
+	@include icon(48px, 48px, 100%)
+	@include trans()
+	cursor: pointer
+	&:hover
+		filter: brightness(120)
+
+.arr_left
+	background-image: url(../img/arr_left.svg)
+	&.slick-arrow
+		left: -84px
+		position: absolute
+		top: calc(50% - 24px)
+		z-index: 2
+.arr_right
+	background-image: url(../img/arr_right.svg)
+	&.slick-arrow
+		right: -84px
+		position: absolute
+		top: calc(50% - 24px)
+		z-index: 2
+
+.gallery_slider
+	.item
+		margin: 0 15px
+	img
+		width: 100%
+		height: auto
+
+
+
+
+#answers
+	padding-top: 67px
+	.content
+		margin-top: 50px
+		max-width: 606px
+	.item
+		margin-bottom: 37px
+	.question
+		cursor: pointer
+		font-weight: bold
+		font-size: 18px
+		line-height: 24px
+		display: flex
+		align-items: center
+		margin-bottom: 0
+		@include trans()
+		&:before
+			@include icon(10px, 5px, 100%)
+			@include trans()
+			background-image: url(../img/caret.svg)
+			min-width: 10px
+			margin-right: 22px
+			transform-origin: center center
+			transform: rotate(-90deg)
+		&.active
+			&:before
+				transform: rotate(0)
+		&:hover
+			color: $hover
+		&:active
+			color: $active
+		
+	.answer
+		display: none
+		font-size: 16px
+		line-height: 27px
+		opacity: 0.7
+		margin-bottom: 0
+		margin-top: 11px
+		padding-left: 32px
+
+#request
+	padding: 63px 0px 53px
+	background-image: url(../img/request.jpg)
+	background-size: cover
+	.sec_title
+		text-align: center
+	.inputs_wrap
+		display: flex
+		margin: 59px -14px 0
+	.text
+		margin: 0 14px 41px
+		width: calc(33.33% - 28px)
+	.primary_btn
+		display: block
+		margin: 0 auto 25px
+
+form
+	.checkbox_field
+		display: -webkit-box
+		display: -webkit-flex
+		display: -ms-flexbox
+		display: flex
+		-webkit-box-align: center
+		-webkit-align-items: center
+		-ms-flex-align: center
+		align-items: center
+		margin: 0 auto
+		max-width: 246px
+		width: auto
+		.checkbox 
+			display: none
+		.checkbox-custom 
+			position: relative
+			background-color: #fff
+			min-width: 12px
+			height: 12px
+			margin-right: 20px
+			cursor: pointer
+			border-radius: 2px
+		.checkbox:checked + .checkbox-custom 
+			@include icon(12px, 12px)
+			background-image: url(../img/check.svg)
+		.label
+			color: #939393
+			font-size: 11px
+			font-weight: normal
+			line-height: 16px
+			a 
+				text-decoration: underline
+				color: #939393
+
+#contacts
+	padding-top: 51px
+	.content
+		display: flex
+		justify-content: space-between
+		padding-top: 46px
+		padding-right: 80px
+		padding-bottom: 25px
+	.item
+		display: flex
+		align-items: flex-start
+		font-size: 16px
+		line-height: 27px
+		margin-bottom: 15px
+		img 
+			margin-right: 21px
+	.contacts
+		.item
+			align-items: center	
+
+
+
+
+footer
+	padding-top: 50px
+	padding-bottom: 44px
+	.container
+		display: flex
+		justify-content: space-between
+	.item
+		line-height: 20px
+		font-size: 12px
+	.politica
+		span
+			border-bottom: 1px dashed 
+	.wayagency
+		display: flex
+		text-align: right
+		img 
+			width: 55.6px
+			margin-left: 18px
+
+.checkboxes
+	display: flex
+	flex-wrap: wrap
+	margin: 38px -15px 80px
+
+.checkbox_field
+	display: -webkit-box
+	display: -webkit-flex
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-webkit-align-items: center
+	-ms-flex-align: center
+	width: calc(25% - 30px)
+	margin: 0 15px
+	align-items: center
+	margin-bottom: 0
+	.checkbox 
+		display: none
+	.checkbox-custom 
+		position: relative
+		width: 29px
+		height: 29px
+		margin-right: 19px
+		border: 1px solid #CACACA
+		cursor: pointer
+		top: 0
+		border-radius: 50%
+	.label
+		color: $hover
+		font-weight: bold
+		font-size: 23px
+		line-height: 31px
+		.name
+			font-size: 18px
+			line-height: 24px
+			color: #000
+
+.checkbox:checked + .checkbox-custom 
+	background-image: url(../img/ellipse.svg)
+	background-repeat: no-repeat
+	background-position: center center 
+
+.popup_done
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	align-items: center
+	justify-content: center
+	background-color: rgba(0, 0, 0 , .8)
+	z-index: 99
+	width: 100vw
+	height: 100vh
+	&.active
+		display: flex !important
+		.message_done
+			opacity: 1
+	.message_done
+		opacity: 0
+		width: 100%
+		height: 100%
+		max-width: 424px
+		max-height: 428px
+		margin: 0 auto
+
+.message_done
+	padding: 15px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	text-align: center
+	background-color: #000000
+	position: relative
+	.close 
+		position: absolute
+		top: 15px 
+		right: 15px
+		font-size: 30px
+	img 
+		width: 142px
+		height: auto
+		margin-bottom: 31px
+	h2 
+		font-size: 40px
+		margin-bottom: 31px
+	p 
+		font-size: 15px
+		font-weight: bold
+
+#popup_form
+	background-color: #000
+	position: relative
+	width: 100%
+	max-width: 424px
+	margin: 0 auto
+	.mfp-close
+		color: #ffffff !important
+	form
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 30px
+		.text
+			margin-bottom: 25px
+		.primary_btn
+			margin-bottom: 25px
+
+.hidden
+	display: none
+
+@import "media" // Always at the end

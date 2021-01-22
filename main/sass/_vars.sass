@@ -1,0 +1,46 @@
+$default-font: 'Montserrat', sans-serif;
+$accent: orange
+$text: #ffffff
+$hover: #E9B45B
+$active: #AE8034
+$btn_bg: linear-gradient(180deg, #F8CD7F 0%, #E3A94C 100%)
+$btn_hover: linear-gradient(180deg, #E1B159 0%, #CC9132 100%)
+$btn_active: linear-gradient(180deg, #D4A34B 0%, #B68331 100%)
+$bg_blue: linear-gradient(180.97deg, #264861 -39.58%, #1D9AD7 97.19%)
+$blue_hover: linear-gradient(178.3deg, #264861 4.38%, #1D9AD7 211.46%)
+$blue_active: linear-gradient(178.3deg, #1C3C52 4.38%, #1A79A7 211.46%)
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 960px)
+
+$gutter: $grid-gutter-width
+
+@mixin trans ($time: .3s)
+	transition: all $time ease
+
+@mixin abs($w: 100%, $h: 100%, $top: 0, $left: 0, $pos: absolute)
+	width: $w
+	height: $h
+	top: $top
+	left: $left
+	position: $pos
+
+@mixin bg ($sz: cover, $pos: center center, $rep: no-repeat)
+	background-size: $sz
+	background-position: $pos
+	background-repeat: $rep
+
+@mixin icon ($w, $h, $size: cover)
+	content: ''
+	display: block
+	width: $w
+	height: $h
+	background-repeat: no-repeat
+	background-size: $size
+	background-position: center center
+
+@mixin resp ()
+	width: 100%
+	height: auto
